@@ -56,7 +56,7 @@ final class PopularQuestionCell: BaseCollectionViewCell {
         
         categoryLabel.snp.makeConstraints { make in
             make.leading.equalTo(profileImageView.snp.trailing).offset(15)
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().inset(10)
         }
         
         participantsLabel.snp.makeConstraints { make in
@@ -64,17 +64,15 @@ final class PopularQuestionCell: BaseCollectionViewCell {
             make.centerY.equalTo(categoryLabel)
         }
         
+        expiredLabel.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-10)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+        
         questionLabel.snp.makeConstraints { make in
             make.top.equalTo(categoryLabel.snp.bottom).offset(5)
             make.leading.equalTo(profileImageView.snp.trailing).offset(15)
-            make.trailing.equalToSuperview().offset(-20)
-            make.height.equalTo(83)
-        }
-        
-        expiredLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-10)
-            make.top.equalTo(questionLabel.snp.bottom).offset(5)
-            make.trailing.equalToSuperview().offset(-20)
+            make.trailing.equalToSuperview().inset(20)
         }
         
         nameLabel.snp.makeConstraints { make in

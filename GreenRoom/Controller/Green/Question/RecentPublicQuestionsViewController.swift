@@ -95,7 +95,7 @@ extension RecentPublicQuestionsViewController {
         } configureSupplementaryView: { dataSource, collectionView, kind,
             indexPath in
             
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: InfoHeaderView.reuseIdentifier, for: indexPath) as? InfoHeaderView else {
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: InfoHeaderView.reuseIdentifier, withReuseIdentifier: InfoHeaderView.reuseIdentifier, for: indexPath) as? InfoHeaderView else {
                 return UICollectionReusableView()
             }
             header.filterShowing = true
