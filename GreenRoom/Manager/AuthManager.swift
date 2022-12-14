@@ -56,7 +56,6 @@ class AuthManager: RequestInterceptor {
 
             switch response.result {
             case .success(let token):
-                print("토큰 갱신 성공")
                 
                 KeychainWrapper.standard.removeAllKeys()
                 KeychainWrapper.standard.set(token.accessToken, forKey: "accessToken")
